@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/assignportaloAuthDB?
+    url: jdbc:mysql://localhost:3306/assignportaloAuthDB?createDatabaseIfNotExist=true
     username : root
     password : 1234
     driver-class-name: com.mysql.jdbc.Driver
@@ -9,6 +9,7 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
     properties:
       hibernate:
         show_sql: true
